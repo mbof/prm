@@ -3,5 +3,10 @@
 
     <string name="pick_image_button_text">Pick</string>
     <string name="app_name">Prm</string>
-
+    <string name="aim_button_text">Set up direction</string>
+    <string name="pick_image_preview_description">Preview of the image to be projected</string>
+    <string name="pick_image_label">Image to project</string>
+    <string name="beam_setup_button_text">Set up beam device</string>
+    <string name="beam_setup_button_text">Start beaming</string>
+    
 </resources>
