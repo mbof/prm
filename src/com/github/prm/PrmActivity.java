@@ -3,6 +3,7 @@ package com.github.prm;
 import java.io.FileNotFoundException;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,14 +15,26 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 public class PrmActivity extends Activity {
-	
+
+	/** The image to be projected */
+	private Bitmap image;
+    
+	/** A place to show a thumbnail of image */
+    private ImageView preview;
+    
+    /** A place to show what is going to be projected */
+    private ImageView projectionView;
+    
+    /** Request types that onActivityResult will be called back with */
+    static final int PHOTO_CHOSEN_REQUEST = 0;
+    
 	/** Image chooser */
 	private Intent pictureChooser;
 	
-	/** Handler for click on image picker */
+	/** Handler for click on "Choose image" button  */
 	private OnClickListener chooseButtonClickListener;
 	
-    /** Called when the activity is first created. */
+    /** Called when the activity is first created */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +55,11 @@ public class PrmActivity extends Activity {
         };
         
         findViewById(R.id.pick_image_button)
-        	.setOnClickListener(chooseButtonClickListener);        
+        	.setOnClickListener(chooseButtonClickListener);
         
         preview = (ImageView) findViewById(R.id.preview);
+        
+        projectionView = (ImageView) findViewById(R.id.projection_view);
         
         Log.d("Prm", "All done");
     }
@@ -60,10 +75,10 @@ public class PrmActivity extends Activity {
     			System.err.println("Photo chosen");
     			Uri imageUri = data.getData();
     			try {
-    				image = BitmapFactory.decodeStream(
-    							getContentResolver()
-    								.openInputStream(imageUri)
-    						);
+    				ContentResolver cr = getContentResolver();
+    				
+    				image = BitmapFactory.decodeStream
+    						(cr.openInputStream(imageUri));
     				
     				preview.setImageBitmap(image);
     				
@@ -74,11 +89,5 @@ public class PrmActivity extends Activity {
     		break;
     	}
     }
-    
-    private Bitmap image;
-    
-    private ImageView preview;
-    
-    static final int PHOTO_CHOSEN_REQUEST = 0;
     
 }

@@ -7,4 +7,7 @@
     <string name="pick_image_label">Image to project</string>
     <string name="prm_start_button_text">Start projecting</string>
     <string name="pick_image_action_title">Choose image</string>
+    <string name="projection_view_description">Projection view</string>
+    <string name="stop_button_text">Stop projecting</string>
+    
 </resources>
