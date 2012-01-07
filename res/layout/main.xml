@@ -18,9 +18,9 @@
 	    
 	    <ImageView
 	        android:id="@+id/preview"
-	        android:layout_width="fill_parent"
+	        android:layout_width="96dp"
+	        android:layout_height="96dp"
 	        android:layout_weight="0.8"
-	        android:layout_height="100dp"
 			android:contentDescription="@string/pick_image_preview_description"
 	    />
 	    
@@ -29,6 +29,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center"
+	        android:layout_weight="0.2"
 	        android:text="@string/pick_image_button_text" />
 
     </LinearLayout>
