@@ -34,17 +34,10 @@
     </LinearLayout>
     
     <Button 
-        android:id="@+id/aim_image_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/aim_button_text"
-    />
-		
-    <Button 
         android:id="@+id/beam_setup_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/beam_setup_button_text"
+        android:text="@string/prm_start_button_text"
     />
     
 </LinearLayout>
