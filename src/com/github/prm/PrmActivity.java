@@ -1,7 +1,6 @@
 package com.github.prm;
 
 import java.io.FileNotFoundException;
-import java.util.List;
 
 import com.github.prm.PrmActivity.Projector;
 
@@ -30,9 +29,6 @@ public class PrmActivity extends Activity {
     
 	/** A place to show a thumbnail of image */
     private ImageView preview;
-    
-    /** A place to show what is going to be projected */
-    private ImageView projectionView;
     
     /** Request types that onActivityResult will be called back with */
     static final int PHOTO_CHOSEN_REQUEST = 0;
@@ -69,9 +65,7 @@ public class PrmActivity extends Activity {
         	.setOnClickListener(chooseButtonClickListener);
         
         preview = (ImageView) findViewById(R.id.preview);
-        
-        projectionView = (ImageView) findViewById(R.id.projection_view);
-        
+                
         projector = new Projector((Button) findViewById(R.id.start_button),
         		(ImageView) findViewById(R.id.projection_view),
         		(TextView) findViewById(R.id.projector_coordinates));
