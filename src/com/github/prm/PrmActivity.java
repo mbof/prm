@@ -136,6 +136,7 @@ public class PrmActivity extends Activity {
     	synchronized public void stop() {
     		startButton.setText(getString(R.string.start_button_text));
     		projectionTextView.setText("Stopped");
+    		sensorManager.unregisterListener(this);
     		this.isProjecting = false;
     	}
 
