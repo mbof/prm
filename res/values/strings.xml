@@ -5,7 +5,7 @@
     <string name="aim_button_text">Set up direction</string>
     <string name="pick_image_preview_description">Preview of the image to be projected</string>
     <string name="pick_image_label">Image to project</string>
-    <string name="prm_start_button_text">Start projecting</string>
+    <string name="start_button_text">Start projecting</string>
     <string name="pick_image_action_title">Choose image</string>
     <string name="projection_view_description">Projection view</string>
     <string name="stop_button_text">Stop projecting</string>

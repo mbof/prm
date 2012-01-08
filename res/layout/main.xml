@@ -37,13 +37,20 @@
     </LinearLayout>
     
     <Button 
-        android:id="@+id/beam_setup_button"
+        android:id="@+id/start_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prm_start_button_text"
+        android:text="@string/start_button_text"
         android:layout_weight="0.5"
     />
     
+   	<TextView 
+   	    android:id="@+id/projector_coordinates"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="()"
+	    android:layout_weight="0" />
+	    
     <ImageView
         android:id="@+id/projection_view"
         android:layout_width="100dp"
